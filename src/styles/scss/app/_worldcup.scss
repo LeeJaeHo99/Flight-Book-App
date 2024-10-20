@@ -1,3 +1,48 @@
 .worldcup-page{
-    
+    margin-top: 200px;
+
+    .inner{
+        @include flex(center, center, column);
+
+        .sub-title{
+            text-align: center;
+            line-height: 1.6;
+        }
+        .start-btn{
+            @include layout(200px, 50px);
+            background-color: #87A2FF;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .worldcup-content--wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            background-color: transparent;
+            border-radius: 50%;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+        .worldcup-content--wrap.bigger{
+            width: 100%;
+            height: 100%;
+            background-color: #87A2FF;
+            border-radius: 0%;
+        }
+    }
+}
+
+.worldcup-wrap{
+    @include flex();
+    @include layout(100%, 100%);
+
+    .worldcup{
+        @include layout(50%, 100%);
+        cursor: pointer;
+    }
 }

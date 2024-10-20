@@ -204,6 +204,61 @@ h4.section-title {
   filter: invert(100%);
 }
 
+.worldcup-page {
+  margin-top: 200px;
+}
+.worldcup-page .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.worldcup-page .inner .sub-title {
+  text-align: center;
+  line-height: 1.6;
+}
+.worldcup-page .inner .start-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #87A2FF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.worldcup-page .inner .worldcup-content--wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.worldcup-page .inner .worldcup-content--wrap.bigger {
+  width: 100%;
+  height: 100%;
+  background-color: #87A2FF;
+  border-radius: 0%;
+}
+
+.worldcup-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.worldcup-wrap .worldcup {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+}
+
 header {
   width: 100%;
   height: 80px;
