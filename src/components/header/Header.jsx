@@ -5,7 +5,7 @@ export default function Header(){
     return(
         <header>
             <div className="inner">
-                <div className="logo-wrap">
+                <Link className="logo-wrap" href={'/'}>
                     <Image
                         className='logo'
                         src={'/images/header/logo.png'}
@@ -13,7 +13,7 @@ export default function Header(){
                         height={50}
                         alt={'로고'}
                     />
-                </div>
+                </Link>
                 <div className="menu-wrap">
                     <ul>
                         <li><Link href={'/'}>공지사항</Link></li>
