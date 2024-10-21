@@ -1,6 +1,13 @@
 import WorldcupContentWrap from '../../components/world-cup/WorldcupContentWrap';
 
-export default function Worldcup() {
+export default async function Worldcup() {
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/worldcup`,
+        {cache: 'force-cache'},
+    );
+    const worldcup = await response.json();
+    console.log('worldcup: ', worldcup);
+
     return (
         <div className="worldcup-page">
             <div className="inner">
