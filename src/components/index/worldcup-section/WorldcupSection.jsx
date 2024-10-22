@@ -10,7 +10,6 @@ export default function WorldcupSection(){
                 <h4 className="sub-title">당신의 여행지 이상형을 추천해드립니다.</h4>
                 <div className="worldcup-sction__content-wrap">
                     <div className="worldcup-sction__bg">
-                        {/* <Image src={'/images/index/worldcup-section/worldcup-section-bg.jpg'} width={500} height={500} alt={'월드컵섹션배경'}/> */}
                         🇰🇷
                     </div>
                     <div className="worldcup-sction__content">

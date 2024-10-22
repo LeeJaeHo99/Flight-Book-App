@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 export default function WorldcupContent(worldcup) {
+    console.log('worldcup: ', worldcup);
     const [open, setOpen] = useState('open');
     const [worldcupIndex, setWorldcupIndex] = useState(0);
     const addIndex = () => {

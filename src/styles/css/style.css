@@ -220,6 +220,12 @@ h4.section-title {
   filter: invert(100%);
 }
 
+.recommend-destination-section {
+  margin-bottom: 80px;
+  width: 100%;
+  height: auto;
+}
+
 .worldcup-page {
   margin-top: 200px;
 }
