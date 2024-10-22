@@ -138,11 +138,14 @@ h4.section-title {
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__bg {
   width: 70%;
   height: 100%;
+  padding: 24px;
+  background-color: #4A628A;
+  border-radius: 16px;
+  font-size: 40px;
 }
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__bg img {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 100%;
@@ -169,14 +172,21 @@ h4.section-title {
 }
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .recommend-destination {
   height: 60%;
+  background-color: #7AB2D3;
+}
+.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .recommend-destination h4.section-title {
+  color: #fff;
+}
+.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .recommend-destination .selected-country--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
   background-color: #ddd;
-}
-.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .recommend-destination p {
-  width: 100%;
-  text-align: end;
-}
-.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .recommend-destination p.recommend-empty {
-  color: #a5a5a5;
+  border-radius: 50%;
 }
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link {
   height: 40%;
@@ -196,6 +206,12 @@ h4.section-title {
 }
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link .link-wrap a, .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link .link-wrap img {
   transition: all 0.3s;
+}
+.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link .link-wrap a {
+  color: #ddd;
+}
+.worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link .link-wrap img {
+  filter: grayscale(100%);
 }
 .worldcup-section .worldcup-sction__content-wrap .worldcup-sction__content .worldcup-link:hover .link-wrap a {
   color: #fff;
@@ -245,18 +261,81 @@ h4.section-title {
   border-radius: 0%;
 }
 
-.worldcup-wrap {
+.worldcup-content {
+  width: 100%;
+  height: 100%;
+}
+.worldcup-content h3.worldcup-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  font-size: 32px;
+  color: #fff;
+}
+.worldcup-content h3.worldcup-title .content-percent {
+  font-size: 20px;
+  color: #fff;
+}
+.worldcup-content h3.worldcup-title .content-percent span {
+  color: #3468C0;
+}
+.worldcup-content h3.worldcup-title .process-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #FA7070;
+  transition: all 0.3s;
+}
+.worldcup-content .worldcup-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
 }
-.worldcup-wrap .worldcup {
+.worldcup-content .worldcup-wrap .worldcup {
   width: 50%;
   height: 100%;
+  transition: all 0.3s;
   cursor: pointer;
+  overflow: hidden;
+}
+.worldcup-content .worldcup-wrap .worldcup img {
+  width: 100%;
+  height: 90%;
+  transition: all 0.3s;
+}
+.worldcup-content .worldcup-wrap .worldcup h5.worldcup-title {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  background-color: #87A2FF;
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+}
+.worldcup-content .worldcup-wrap .worldcup:first-child {
+  border-right: 3px solid #fff;
+}
+.worldcup-content .worldcup-wrap .worldcup.clicked img {
+  transform: scale(1.3);
+}
+
+.worldcup-content--wrap.close {
+  width: 0;
+  height: 0;
 }
 
 header {

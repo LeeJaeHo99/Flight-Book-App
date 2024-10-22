@@ -37,12 +37,69 @@
     }
 }
 
-.worldcup-wrap{
-    @include flex();
+.worldcup-content{
     @include layout(100%, 100%);
+    
+    h3.worldcup-title{
+        @include flex();
+        position: relative;
+        @include layout(100%, 80px);
+        font-size: 32px;
+        color: #fff;
 
-    .worldcup{
-        @include layout(50%, 100%);
-        cursor: pointer;
+        .content-percent{
+            font-size: 20px;
+            color: #fff;
+
+            span{
+                color: #3468C0;
+            }
+        }
+        .process-bar{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #FA7070;
+            transition: all 0.3s
+        }
     }
+    .worldcup-wrap{
+        @include flex();
+        @include layout(100%, calc(100% - 80px));
+    
+        .worldcup{
+            @include layout(50%, 100%);
+            transition: all 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+            
+            img{
+                @include layout(100%, 90%);
+                transition: all 0.3s
+            }
+            h5.worldcup-title{
+                position: relative;
+                z-index: 9;
+                @include flex();
+                @include layout(100%, 10%);
+                background-color: #87A2FF;
+                font-size: 32px;
+                font-weight: 400;
+                color: #fff;
+            }
+            &:first-child{
+                border-right: 3px solid #fff;
+            }
+        }
+        .worldcup.clicked{
+            img{
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+.worldcup-content--wrap.close{
+    @include layout(0, 0);
 }

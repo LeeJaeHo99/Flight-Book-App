@@ -6,7 +6,6 @@ export default async function Worldcup() {
         {cache: 'force-cache'},
     );
     const worldcup = await response.json();
-    console.log('worldcup: ', worldcup);
 
     return (
         <div className="worldcup-page">
@@ -17,7 +16,7 @@ export default async function Worldcup() {
                     <br />
                     나에게 맞는 여행지를 추천받을 수 있습니다.
                 </h4>
-                <WorldcupContentWrap/>
+                <WorldcupContentWrap worldcup={worldcup}/>
             </div>
         </div>
     );
