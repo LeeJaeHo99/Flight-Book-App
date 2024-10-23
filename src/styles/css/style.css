@@ -225,6 +225,131 @@ h4.section-title {
   width: 100%;
   height: auto;
 }
+.recommend-destination-section .recommend-content--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.recommend-destination-section .recommend-content .destination-img--wrap {
+  margin-bottom: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.recommend-destination-section .recommend-content .destination-img {
+  transition: all 0.8s;
+  cursor: pointer;
+}
+.recommend-destination-section .recommend-content .destination-img:hover {
+  transform: scale(1.1);
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 95%;
+  margin: 0 auto;
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap .destination-wrap .city {
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 500;
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap .destination-wrap .country {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 6px;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap .rate-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100px;
+  height: 55px;
+  padding: 20px;
+  background-color: #379DF1;
+  border-radius: 120px;
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap .rate-wrap img {
+  filter: brightness(0) invert(1);
+}
+.recommend-destination-section .recommend-content .recommend-text--wrap .rate-wrap .rate {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sale-section .sale-content--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.sale-section .sale-content > img {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+.sale-section .sale-content .sale-text--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__top, .sale-section .sale-content .sale-text--wrap .sale-text__bot {
+  width: 100%;
+  height: auto;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__top .sale-info .city {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__top .sale-company {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__bot .before-price--wrap {
+  position: relative;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__bot .before-price--wrap .sale-percent {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  font-size: 14px;
+  color: #379DF1;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__bot .before-price--wrap .before-price {
+  color: #f00;
+  text-decoration: line-through;
+}
+.sale-section .sale-content .sale-text--wrap .sale-text__bot .after-price {
+  font-size: 20px;
+}
 
 .worldcup-page {
   margin-top: 200px;

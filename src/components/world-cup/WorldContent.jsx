@@ -1,10 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function WorldcupContent(worldcup) {
-    console.log('worldcup: ', worldcup);
-    const [open, setOpen] = useState('open');
+    let router = useRouter();
+    const [open, setOpen] = useState("open");
     const [worldcupIndex, setWorldcupIndex] = useState(0);
     const addIndex = () => {
         setTimeout(() => {
@@ -36,17 +37,21 @@ export default function WorldcupContent(worldcup) {
         }, 1500);
     };
 
-    let worldcupData = worldcup.worldcup.worldcup.data[worldcupIndex];
-    let worldcupLTitle = worldcupData.lTitle;
-    let worldcupLImg = worldcupData.lImg;
-    let worldcupRTitle = worldcupData.rTitle;
-    let worldcupRImg = worldcupData.rImg;
+    let worldcupData =
+        worldcupIndex < 10
+            ? worldcup.worldcup.worldcup.data[worldcupIndex]
+            : null;
+    let worldcupLTitle = worldcupData?.lTitle || "";
+    let worldcupLImg = worldcupData?.lImg || "";
+    let worldcupRTitle = worldcupData?.rTitle || "";
+    let worldcupRImg = worldcupData?.rImg || "";
 
-    if(worldcupIndex === 9){
-        setTimeout(() => {
-            setOpen('close');
-        }, 300);
-    }
+    const showResult = () => {
+        if (worldcupIndex === 10) {
+            router.push("/worldcup/result");
+        }
+    };
+    showResult();
 
     return (
         <div className={`worldcup-content ${open}`}>
@@ -59,7 +64,7 @@ export default function WorldcupContent(worldcup) {
                 </span>
                 <div
                     className="process-bar"
-                    style={{ width: `${(worldcupIndex * (100 / 9))}%` }}
+                    style={{ width: `${worldcupIndex * (100 / 9)}%` }}
                 ></div>
             </h3>
             <div className="worldcup-wrap">

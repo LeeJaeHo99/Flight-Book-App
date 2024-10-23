@@ -115,9 +115,118 @@
     margin-bottom: 80px;
     @include layout(100%, auto);
 
+    .recommend-content--wrap{
+        @include flex(center, space-between);
+    }
+    .recommend-content{
+        .destination-img--wrap{
+            margin-bottom: 24px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .destination-img{
+            transition: all 0.8s;
+            cursor: pointer;
 
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .recommend-text--wrap{
+            @include flex(center, space-between);
+            width: 95%;
+            margin: 0 auto;
+
+            .destination-wrap{
+                .city{
+                    margin-bottom: 16px;
+                    font-size: 28px;
+                    font-weight: 500;
+                }
+                .country{
+                    @include flex(center, flex-start);
+                    gap: 6px;
+                    font-size: 13px;
+                    color: #a5a5a5;
+                }
+            }
+            .rate-wrap{
+                @include flex(center, space-between);
+                @include layout(100px, 55px);
+                padding: 20px;
+                background-color: #379DF1;
+                border-radius: 120px;
+
+                img{
+                    filter: brightness(0) invert(1);
+                }
+                .rate{
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.sale-section{
+    .sale-content--wrap{
+        @include flex(center, space-between);
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .sale-content{
+        > img{
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+        .sale-text--wrap{
+            @include flex(center, space-between, column);
+            @include layout(100%, auto);
+            
+            .sale-text__top, .sale-text__bot{
+                @include layout(100%, auto);
+            }
+            .sale-text__top{
+                @include flex(center, space-between);
+                margin-bottom: 24px;
+
+                .sale-info{
+                    .city{
+                        margin-bottom: 8px;
+                        font-size: 20px;
+                    }
+                }
+                .sale-company{
+                    @include flex(center, flex-start);
+                    gap: 8px;
+                }
+            }
+            .sale-text__bot{
+                @include flex(center, space-between);
+
+                .before-price--wrap{
+                    position: relative;
+
+                    .sale-percent{
+                        position: absolute;
+                        top: -16px;
+                        left: 0;
+                        font-size: 14px;
+                        color: #379DF1;
+                    }
+                    .before-price{
+                        color: #f00;
+                        text-decoration: line-through;
+                    }
+                }
+                .after-price{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
 
 .review-section{}
-
-.sale-section{}
