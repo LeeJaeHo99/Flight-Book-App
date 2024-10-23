@@ -351,6 +351,63 @@ h4.section-title {
   font-size: 20px;
 }
 
+.review-section {
+  margin-bottom: 160px;
+}
+.review-section .review-content--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  height: auto;
+}
+.review-section .review-content--wrap .review-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 33.3333333333%;
+  height: auto;
+  padding: 16px;
+  background-color: #87A2FF;
+  border-radius: 24px;
+}
+.review-section .review-content--wrap .review-content__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+}
+.review-section .review-content--wrap .review-content__text-wrap {
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.review-section .review-content--wrap .review-content__text-wrap .star-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+.review-section .review-content--wrap .review-content__text-wrap .review-text {
+  font-size: 22px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
 .worldcup-page {
   margin-top: 200px;
 }

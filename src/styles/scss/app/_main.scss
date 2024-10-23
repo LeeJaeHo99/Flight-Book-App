@@ -229,4 +229,45 @@
     }
 }
 
-.review-section{}
+.review-section{
+    margin-bottom: 160px;
+    .review-content--wrap{
+        @include flex(center, space-around);
+        gap: 24px;
+        @include layout(100%, auto);
+
+        .review-content{
+            @include flex(center, center, column);
+            @include layout(calc(100% / 3), auto);
+            padding: 16px;
+            background-color: #87A2FF;
+            border-radius: 24px;
+
+            &__profile{
+                @include flex(center, center);
+                @include layout(120px, 120px);
+                margin-bottom: 24px;
+                background-color: #e7e7e7;
+                border-radius: 50%;
+            }
+            &__text-wrap{
+                @include layout(100%, auto);
+                padding: 24px;
+                background-color: #fff;
+                border-radius: 12px;
+
+                .star-wrap{
+                    @include flex();
+                    gap: 12px;
+                    @include layout(100%, auto);
+                    margin-bottom: 32px;
+                }
+                .review-text{
+                    font-size: 22px;
+                    line-height: 1.4;
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
