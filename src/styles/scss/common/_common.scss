@@ -11,6 +11,10 @@
 
 section{
     margin-top: 60px;
+
+    &:last-child{
+        margin-bottom: 60px;
+    }
 }
 
 h3.main-title{

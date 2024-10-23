@@ -70,6 +70,9 @@ table {
 section {
   margin-top: 60px;
 }
+section:last-child {
+  margin-bottom: 60px;
+}
 
 h3.main-title {
   margin-bottom: 16px;
@@ -123,9 +126,6 @@ h4.section-title {
   color: rgba(255, 255, 255, 0.4392156863);
 }
 
-.worldcup-section {
-  margin-bottom: 60px;
-}
 .worldcup-section .worldcup-sction__content-wrap {
   display: flex;
   align-items: center;
@@ -351,9 +351,6 @@ h4.section-title {
   font-size: 20px;
 }
 
-.review-section {
-  margin-bottom: 160px;
-}
 .review-section .review-content--wrap {
   display: flex;
   align-items: center;
@@ -567,4 +564,10 @@ header .inner .menu-wrap .profile-wrap {
   height: 60px;
   background-color: #eee;
   border-radius: 50%;
+}
+footer {
+  width: 100%;
+  height: 300px;
+  padding: 24px 0;
+  background-color: #ddd;
 }/*# sourceMappingURL=style.css.map */

@@ -28,7 +28,6 @@
 }
 
 .worldcup-section{
-    margin-bottom: 60px;
     .worldcup-sction__content-wrap{
         @include flex();
         gap: 16px;
@@ -230,7 +229,6 @@
 }
 
 .review-section{
-    margin-bottom: 160px;
     .review-content--wrap{
         @include flex(center, space-around);
         gap: 24px;

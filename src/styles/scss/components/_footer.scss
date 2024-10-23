@@ -1,0 +1,5 @@
+footer{
+    @include layout(100%, 300px);
+    padding: 24px 0;
+    background-color: #ddd;
+}
