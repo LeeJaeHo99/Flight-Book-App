@@ -1,50 +1,46 @@
 import Image from "next/image";
 
-export default function SaleSection() {
-    const mock = new Array(12).fill(0);
+export default async function SaleSection() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/sale`);
+    const result = await response.json();
+    const saleContent = result.data;
+    if(!response.ok){
+        return <div>오류가 발생하였습니다</div>
+    }
     return (
         <section className="sale-section">
             <div className="inner">
                 <h3 className="main-title">최저가 항공권</h3>
                 <h4 className="sub-title">할인된 항공권을 안내해드립니다.</h4>
                 <div className="sale-content--wrap">
-                    {mock.map(() => {
+                    {saleContent.map((el, i) => {
+                        let saledPrice = saleContent[i].price - (saleContent[i].price * (saleContent[i].salePercent / 100));
+                        console.log('saledPrice: ', saledPrice);
                         return (
-                            <div className="sale-content">
+                            <div className="sale-content" key={i}>
                                 <Image
-                                    src={"/images/worldcup/airplane.png"}
+                                    src={`/images/index/sale-section/${saleContent[i].country}.jpg`}
                                     width={200}
                                     height={200}
-                                    alt={""}
+                                    alt={"asdf"}
                                 />
                                 <div className="sale-text--wrap">
                                     <div className="sale-text__top">
                                         <div className="sale-info">
-                                            <div className="city">Osaka</div>
-                                        </div>
-                                        <div className="sale-company">
-                                            <Image
-                                                src={
-                                                    "/images/company-logo/koreanair--logo.png"
-                                                }
-                                                width={20}
-                                                height={20}
-                                                alt={"company-logo"}
-                                            />
-                                            <span>대한항공</span>
+                                            <div className="city">{saleContent[i].country}</div>
                                         </div>
                                     </div>
                                     <div className="sale-text__bot">
                                         <div className="before-price--wrap">
                                             <span className="sale-percent">
-                                                10%
+                                            {saleContent[i].salePercent} %
                                             </span>
                                             <span className="before-price">
-                                                20000
+                                            ₩ {saleContent[i].price}
                                             </span>
                                         </div>
                                         <div className="after-price">
-                                            ₩ <span>18000</span>
+                                            ₩ <span>{saledPrice}</span>
                                         </div>
                                     </div>
                                 </div>
