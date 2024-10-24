@@ -19,7 +19,7 @@ export default function Header(){
                         <li><Link href={'/'}>공지사항</Link></li>
                         <li><Link href={'/'}>예약확인</Link></li>
                         <li><Link href={'/'}>항공권찾기</Link></li>
-                        <li><Link href={'/'}>여행월드컵</Link></li>
+                        <li><Link href={'/worldcup'}>여행월드컵</Link></li>
                     </ul>
                     <div className="profile-wrap">
                         <Image

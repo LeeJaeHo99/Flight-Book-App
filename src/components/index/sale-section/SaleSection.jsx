@@ -5,7 +5,7 @@ export default function SaleSection() {
     return (
         <section className="sale-section">
             <div className="inner">
-                <h3 className="main-title">세일</h3>
+                <h3 className="main-title">최저가 항공권</h3>
                 <h4 className="sub-title">할인된 항공권을 안내해드립니다.</h4>
                 <div className="sale-content--wrap">
                     {mock.map(() => {

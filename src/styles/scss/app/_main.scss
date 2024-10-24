@@ -1,5 +1,6 @@
 .main-wrap{
     @include layout(100%, 640px);
+    margin-bottom: 160px;
 
     .inner{
         position: relative;
@@ -23,6 +24,33 @@
             left: 50%;
             transform: translate(-50%, -50%);
             @include font($ns, 32px, #ffffff70);
+        }
+        .search-menu--wrap{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include layout(80%, 250px);
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0px 0px 20px 0px #00000020;
+            opacity: 0;
+            transition: all 0.8s;
+
+            .search-menu__title{
+                font-size: 24px;
+                font-weight: 700;
+                color: #4A628A;
+            }
+            .search-menu__input-wrap{
+                @include flex(center, flex-start);
+                @include layout(100%, auto);
+            }
+        }
+        .search-menu--wrap.enter{
+            opacity: 1;
+            bottom: -100px
         }
     }
 }
@@ -119,6 +147,7 @@
     }
     .recommend-content{
         .destination-img--wrap{
+            display: block;
             margin-bottom: 24px;
             border-radius: 16px;
             overflow: hidden;

@@ -1,5 +1,10 @@
 header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
     @include layout(100%, 80px);
+    background-color: #fff;
     box-shadow: 0px 0px 20px 0px #f0f0f0;
 
     .inner{

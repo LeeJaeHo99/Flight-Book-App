@@ -95,6 +95,7 @@ h4.section-title {
 .main-wrap {
   width: 100%;
   height: 640px;
+  margin-bottom: 160px;
 }
 .main-wrap .inner {
   position: relative;
@@ -124,6 +125,37 @@ h4.section-title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 32px;
   color: rgba(255, 255, 255, 0.4392156863);
+}
+.main-wrap .inner .search-menu--wrap {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 250px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1254901961);
+  opacity: 0;
+  transition: all 0.8s;
+}
+.main-wrap .inner .search-menu--wrap .search-menu__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4A628A;
+}
+.main-wrap .inner .search-menu--wrap .search-menu__input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.main-wrap .inner .search-menu--wrap.enter {
+  opacity: 1;
+  bottom: -100px;
 }
 
 .worldcup-section .worldcup-sction__content-wrap {
@@ -232,6 +264,7 @@ h4.section-title {
   flex-direction: row;
 }
 .recommend-destination-section .recommend-content .destination-img--wrap {
+  display: block;
   margin-bottom: 24px;
   border-radius: 16px;
   overflow: hidden;
@@ -524,8 +557,13 @@ h4.section-title {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
   width: 100%;
   height: 80px;
+  background-color: #fff;
   box-shadow: 0px 0px 20px 0px #f0f0f0;
 }
 header .inner {

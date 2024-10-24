@@ -1,4 +1,4 @@
-import MainContent from "@/components/index/MainContent";
+import MainContent from "@/components/index/main-section/MainContent";
 import WorldcupSection from "@/components/index/worldcup-section/WorldcupSection";
 import RecommendDestinationSection from '@/components/index/recommend-section/RecommendDestinationSection';
 import ReviewSection from '@/components/index/review-section/ReviewSection';
